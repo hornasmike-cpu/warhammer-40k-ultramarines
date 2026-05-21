@@ -1,0 +1,162 @@
+:root {
+    --blue: #0A2540;
+    --gold: #C5A26E;
+    --lightblue: #4A90E2;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(#0A2540, #1E3A5F);
+    color: #E0E0E0;
+    line-height: 1.6;
+}
+
+header {
+    background: var(--blue);
+    border-bottom: 4px solid var(--gold);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--gold);
+    text-shadow: 0 0 10px rgba(197, 162, 110, 0.8);
+}
+
+.menu {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.menu a {
+    color: #E0E0E0;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: var(--gold);
+}
+
+.search-bar {
+    padding: 8px 16px;
+    border: 2px solid var(--gold);
+    background: rgba(255,255,255,0.1);
+    color: white;
+    border-radius: 4px;
+    width: 250px;
+}
+
+.hero {
+    background: url('../images/hero.jpg') center/cover no-repeat; /* přidej hero obrázek později */
+    height: 400px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(10, 37, 64, 0.75);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    width: 100%;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    color: var(--gold);
+    text-shadow: 0 0 20px black;
+}
+
+.hero p {
+    font-size: 1.4rem;
+    max-width: 700px;
+    margin: 20px auto;
+}
+
+main {
+    padding: 40px 0;
+}
+
+.card {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid var(--gold);
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 30px;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.term-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+}
+
+.img-small {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 3px solid var(--gold);
+    border-radius: 8px;
+    float: right;
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+h1, h2, h3 {
+    color: var(--gold);
+}
+
+h2 {
+    border-bottom: 2px solid var(--lightblue);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+footer {
+    background: #0A2540;
+    text-align: center;
+    padding: 30px 0;
+    border-top: 3px solid var(--gold);
+}
+
+.content {
+    padding: 20px 0;
+}
