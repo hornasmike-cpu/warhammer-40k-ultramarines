@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encyclopaedia Ultramarines • Warhammer 40,000</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    XIII LEGIO<br>
+                    <span>ULTRAMARINES</span>
+                </div>
+                <div class="menu">
+                    <a href="index.html">Hlavní stránka</a>
+                    <a href="pages/guilliman.html">Roboute Guilliman</a>
+                    <a href="pages/armour.html">Power Armour</a>
+                    <a href="pages/bolter.html">Bolter</a>
+                    <a href="pages/tactics.html">Codex Astartes</a>
+                    <a href="pages/ultramar.html">Ultramar</a>
+                    <a href="pages/chapter.html">Organizace Kapitoly</a>
+                </div>
+                <input type="text" id="search" class="search-bar" placeholder="Vyhledat pojmy...">
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>ENCYCLOPAEDIA<br>ULTRAMARINES</h1>
+            <p>Oficiální archiv XIII. legie Adeptus Astartes</p>
+            <p class="subtitle">„Courage and Honour!“</p>
+        </div>
+    </section>
+
+    <main class="container">
+        <h2>Vítejte, bratře Astartes</h2>
+        <p class="welcome-text">
+            Tato encyklopedie shromažďuje znalosti o nejslavnější a nejdůslednější kapitole 
+            vesmírných mariňáků – <strong>Ultramarines</strong>. 
+            Zde naleznete informace o našem Primarchovi, výzbroji, taktice i domovském sektoru.
+        </p>
+
+        <div class="card">
+            <h3>Pro Imperium!</h3>
+            <ul>
+                <li>✔️ Přesné informace z lore Warhammer 40k</li>
+                <li>✔️ Každý pojem doplněn ilustrací</li>
+                <li>✔️ Dodržování Codex Astartes</li>
+                <li>✔️ Navrženo pro bratry Ultramarines</li>
+            </ul>
+        </div>
+
+        <h2 style="margin-top: 50px;">Klíčové pojmy</h2>
+        <div class="term-grid">
+            <a href="pages/guilliman.html" class="card-link">
+                <div class="card">
+                    <h3>Roboute Guilliman</h3>
+                    <p>Primarch XIII. legie, Lord Regent Imperia</p>
+                </div>
+            </a>
+            <a href="pages/armour.html" class="card-link">
+                <div class="card">
+                    <h3>Power Armour</h3>
+                    <p>Mark VII Aquila — symbol síly Ultramarines</p>
+                </div>
+            </a>
+            <a href="pages/bolter.html" class="card-link">
+                <div class="card">
+                    <h3>Bolter</h3>
+                    <p>Základní a nejslavnější zbraň Space Marine</p>
+                </div>
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Encyclopaedia Ultramarines — Fan Project</p>
+            <p>
+                <a href="https://github.com/tvuj-uzivatel/ultramarines-encyclopedia" 
+                   target="_blank" style="color: var(--gold);">
+                    GitHub Repository
+                </a>
+            </p>
+            <p><strong>For the Emperor and Macragge!</strong></p>
+        </div>
+    </footer>
+
+    <script>
+        // Jednoduché vyhledávání
+        document.getElementById('search').addEventListener('keyup', function(e) {
+            if (e.key === 'Enter') {
+                const term = this.value.toLowerCase().trim();
+                if (term.includes('guilliman') || term.includes('primarch')) 
+                    window.location.href = 'pages/guilliman.html';
+                else if (term.includes('armour') || term.includes('zbroj') || term.includes('power')) 
+                    window.location.href = 'pages/armour.html';
+                else if (term.includes('bolter') || term.includes('bolt')) 
+                    window.location.href = 'pages/bolter.html';
+                else 
+                    alert('Termín nenalezen. Zkuste: Guilliman, Armour, Bolter...');
+            }
+        });
+    </script>
+</body>
+</html>
